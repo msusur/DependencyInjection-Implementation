@@ -102,7 +102,6 @@ namespace EasyDependencyInjection.Easy
             return new EasyDependencyContainer(_registrations);
         }
 
-
         public void Dispose()
         {
 

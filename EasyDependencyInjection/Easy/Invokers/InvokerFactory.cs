@@ -5,7 +5,7 @@ using EasyDependencyInjection.Easy.Registrations;
 
 namespace EasyDependencyInjection.Easy.Invokers
 {
-    internal class InvokerFactory
+    public class InvokerFactory
     {
         private static readonly Dictionary<Type, Type> Invokers = new Dictionary<Type, Type>
         {
@@ -20,6 +20,7 @@ namespace EasyDependencyInjection.Easy.Invokers
             var hasInvoker = Invokers.ContainsKey(registrationType);
             if (hasInvoker)
             {
+                // Activator mechanism should be abstracted.
                 return Activator.CreateInstance(Invokers[registrationType], registration, container) as InvokerBase;
             }
             throw new InvokerNotFoundException(registrationType.FullName);

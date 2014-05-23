@@ -2,7 +2,7 @@ using EasyDependencyInjection.Easy.Registrations;
 
 namespace EasyDependencyInjection.Easy.Invokers
 {
-    internal abstract class InvokerBase
+    public abstract class InvokerBase
     {
         protected IEasyDependencyContainer Container { get; private set; }
 
@@ -18,7 +18,7 @@ namespace EasyDependencyInjection.Easy.Invokers
         public abstract object Invoke();
     }
 
-    internal abstract class InvokerBase<TRegistrationType> : InvokerBase
+    public abstract class InvokerBase<TRegistrationType> : InvokerBase
          where TRegistrationType : EasyRegistration
     {
 

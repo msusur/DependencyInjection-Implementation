@@ -2,7 +2,7 @@ using System;
 
 namespace EasyDependencyInjection.Easy.Registrations
 {
-    internal class InstanceRegistration : EasyRegistration
+    public class InstanceRegistration : EasyRegistration
     {
         public object Instance { get; private set; }
 

@@ -5,7 +5,7 @@ using EasyDependencyInjection.Easy.Registrations;
 
 namespace EasyDependencyInjection.Easy.Invokers
 {
-    internal class InvocationInvoker : InvokerBase<InvocationRegistration>
+    public class InvocationInvoker : InvokerBase<InvocationRegistration>
     {
         public InvocationInvoker(InvocationRegistration registration, IEasyDependencyContainer container)
             : base(registration, container)
